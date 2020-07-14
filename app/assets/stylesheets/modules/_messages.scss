@@ -1,8 +1,15 @@
 * {
   box-sizing: border-box;
 }
+@mixin hight-width($height,$width){
+  height: $height;
+  width: $width;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;
 }
 
+.SideBar {
+  @include hight-width(100vh,300px);
