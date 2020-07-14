@@ -16,6 +16,11 @@ $color-white: rgb(255, 255, 255);
   width: $width;
 }
 
+@mixin color-font($color,$font-size){
+  color: $color;
+  font-size: $font-size;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;
