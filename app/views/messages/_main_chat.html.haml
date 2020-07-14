@@ -21,3 +21,10 @@
         %p.Message__content test2
 
   .MessageForm
+    %form.new_message
+      .InputBox
+        %input{type: "text", class: "InputBox__text", placeholder: "type a message"}
+        %label{class: "InputBox__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "InputBox__image__file"}
+      %input{type: "submit", name: "commit", class: "SubmitBtn", value: "Send"} 
