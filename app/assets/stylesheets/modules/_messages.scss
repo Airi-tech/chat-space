@@ -95,3 +95,31 @@
     }
   }
 
+  .MessageList {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+
+    .MessageBox {
+      margin-bottom: 46px;
+
+      &__MessageInfo {
+        display: flex;
+
+        &__userName {
+          @include color-font(#333333,16px);
+        }
+
+        &__date {
+          @include color-font(#999999,12px);
+          padding-left: 10px;
+        }
+      }
+
+      &__Message {
+        @include color-font(#434A54,14px);
+        margin-top: 12px;
+      }
+    }
+  }
+
