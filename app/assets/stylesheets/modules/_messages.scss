@@ -38,3 +38,29 @@
       }
     }  
   }
+
+  .GroupList {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+
+    &__groups {
+      padding: 20px 0 40px;
+
+      .group {
+        color: $color-white;
+        font-weight: bold;
+        text-decoration: none;
+
+        &__groupName {
+          font-size: 15px;
+        }
+
+        &__message {
+          font-size: 11px;
+          margin-top: 5px;
+        }
+      }  
+    }
+  }
+}
