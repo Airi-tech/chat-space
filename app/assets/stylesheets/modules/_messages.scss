@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
+$color-white: rgb(255, 255, 255);
+
 @mixin hight-width($height,$width){
   height: $height;
   width: $width;
