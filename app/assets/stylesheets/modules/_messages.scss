@@ -64,3 +64,8 @@
     }
   }
 }
+
+.ChatMain {
+  @include hight-width(100vh,calc(100vw - 300px));
+  background-color: $color-white;
+
