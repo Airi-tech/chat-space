@@ -4,6 +4,13 @@
 
 $color-white: rgb(255, 255, 255);
 
+@mixin duplication-style($height,$background-color,$padding){
+  display: flex;
+  height: $height;
+  background-color: $background-color;
+  padding: $padding
+}
+
 @mixin hight-width($height,$width){
   height: $height;
   width: $width;
