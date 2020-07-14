@@ -13,3 +13,28 @@
 
 .SideBar {
   @include hight-width(100vh,300px);
+
+  .SideHeader {
+    @include color-font($color-white,16px);
+    @include duplication-style(100px,#253141,0 20px);
+    font-weight: bold;
+    align-items: center;
+
+    &__lists {
+      display: flex;
+      justify-content: space-between;
+      @include hight-width(20px,260px);
+
+      &__icons {
+        display: flex;
+
+        li {
+          margin-left: 5px;
+
+          a {
+            color: $color-white;
+          }
+        }
+      }
+    }  
+  }
