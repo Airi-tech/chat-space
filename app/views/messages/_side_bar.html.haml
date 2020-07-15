@@ -1,13 +1,14 @@
 .SideBar
   .SideHeader
     .SideHeader__lists
-      %p.SideHeader__lists__userName 佐藤愛里
+      %p.SideHeader__lists__userName
+        = current_user.name
       %ul.SideHeader__lists__icons
         %li.SideHeader__lists__newGroup
           =link_to "#" do
             =icon('fas', 'edit')
         %li.SideHeader__lists__editUseer
-          =link_to "#" do
+          = link_to edit_user_path(current_user) do
             =icon('fas', 'cog')
 
   .GroupList
