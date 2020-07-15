@@ -1,0 +1,22 @@
+.SideBar
+  .SideHeader
+    .SideHeader__lists
+      %p.SideHeader__lists__userName 佐藤愛里
+      %ul.SideHeader__lists__icons
+        %li.SideHeader__lists__newGroup
+          =link_to "#" do
+            =icon('fas', 'edit')
+        %li.SideHeader__lists__editUseer
+          =link_to "#" do
+            =icon('fas', 'cog')
+
+  .GroupList
+    .GroupList__groups
+      = link_to "#", class:"group" do
+        %p.group__groupName test1
+        %p.group__message テストテストテスト
+
+    .GroupList__groups
+      = link_to "#", class:"group" do
+        %p.group__groupName test2
+        %p.group__message テストテストテスト

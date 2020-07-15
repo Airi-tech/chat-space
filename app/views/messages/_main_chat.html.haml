@@ -1,0 +1,30 @@
+.ChatMain
+  .MeinHeader
+    .MeinHeader__group
+      .MeinHeader__groupName test1
+      .MeinHeader__groupMember Member : 佐藤愛里
+    = link_to "#", class: "MeinHeader__editBtn" do
+      Edit
+
+  .MessageList
+    .MessageBox
+      .MessageBox__MessageInfo
+        .MessageBox__MessageInfo__userName 佐藤愛里
+        .MessageBox__MessageInfo__date 2020年7月13日 00時00分
+      .MessageBox__Message
+        %p.Message__content test
+    .MessageBox
+      .MessageBox__MessageInfo
+        .MessageBox__MessageInfo__userName 佐藤愛里
+        .MessageBox__MessageInfo__date 2020年7月13日 00時00分
+      .MessageBox__Message
+        %p.Message__content test2
+
+  .MessageForm
+    %form.new_message
+      .InputBox
+        %input{type: "text", class: "InputBox__text", placeholder: "type a message"}
+        %label{class: "InputBox__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "InputBox__image__file"}
+      %input{type: "submit", name: "commit", class: "SubmitBtn", value: "Send"} 

@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+$color-white: rgb(255, 255, 255);
+
+@mixin duplication-style($height,$background-color,$padding){
+  display: flex;
+  height: $height;
+  background-color: $background-color;
+  padding: $padding
+}
+
+@mixin hight-width($height,$width){
+  height: $height;
+  width: $width;
+}
+
+@mixin color-font($color,$font-size){
+  color: $color;
+  font-size: $font-size;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.SideBar {
+  @include hight-width(100vh,300px);
+
+  .SideHeader {
+    @include color-font($color-white,16px);
+    @include duplication-style(100px,#253141,0 20px);
+    font-weight: bold;
+    align-items: center;
+
+    &__lists {
+      display: flex;
+      justify-content: space-between;
+      @include hight-width(20px,260px);
+
+      &__icons {
+        display: flex;
+
+        li {
+          margin-left: 5px;
+
+          a {
+            color: $color-white;
+          }
+        }
+      }
+    }  
+  }
+
+  .GroupList {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+
+    &__groups {
+      padding: 20px 0 40px;
+
+      .group {
+        color: $color-white;
+        font-weight: bold;
+        text-decoration: none;
+
+        &__groupName {
+          font-size: 15px;
+        }
+
+        &__message {
+          font-size: 11px;
+          margin-top: 5px;
+        }
+      }  
+    }
+  }
+}
+
+.ChatMain {
+  @include hight-width(100vh,calc(100vw - 300px));
+  background-color: $color-white;
+
+  .MeinHeader {
+    @include duplication-style(100px,$color-white,0 40px);
+    border-bottom: solid 1px #eeeeee;
+    justify-content: space-between;
+
+    &__groupName {
+      @include color-font(#333333,20px);
+      padding: 35px 0 15px;
+    }
+
+    &__groupMember {
+      @include color-font(#999999,12px);
+    } 
+
+    &__editBtn {
+      @include color-font(#38aef0,16px);
+      display: block;
+      margin-top: 28px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      border: solid 1px #38aef0;
+      text-decoration: none;
+    }
+  }
+
+  .MessageList {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+
+    .MessageBox {
+      margin-bottom: 46px;
+
+      &__MessageInfo {
+        display: flex;
+
+        &__userName {
+          @include color-font(#333333,16px);
+        }
+
+        &__date {
+          @include color-font(#999999,12px);
+          padding-left: 10px;
+        }
+      }
+
+      &__Message {
+        @include color-font(#434A54,14px);
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .MessageForm {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+
+    form {
+      display: flex;
+
+      .InputBox {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        &__text {
+          @include hight-width(50px,100%);
+          color: #434a54;
+          border-style: none;
+          padding: 0 40px 0 10px;
+        }
+
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.3rem;
+
+          &__file {
+            display: none;
+          }
+        }
+      }
+
+      .SubmitBtn {
+        @include hight-width(50px,100px);
+        @include color-font($color-white,16px);
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        border-style: none;
+      }
+    }
+  }
+}
