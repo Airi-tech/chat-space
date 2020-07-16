@@ -156,7 +156,11 @@ $color-white: rgb(255, 255, 255);
     background-color: #d2d2d2;
     padding: 20px 40px;
 
-    form {
+    .field_with_errors {
+      display: contents;
+    }
+
+    .new_message {
       display: flex;
 
       .InputBox {
