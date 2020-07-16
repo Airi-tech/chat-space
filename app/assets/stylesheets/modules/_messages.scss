@@ -98,6 +98,11 @@ $color-white: rgb(255, 255, 255);
 
     &__groupMember {
       @include color-font(#999999,12px);
+      display: flex;
+
+      &__member {
+        padding-right: 5px;
+      }
     } 
 
     &__editBtn {
