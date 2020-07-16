@@ -5,7 +5,7 @@
         = current_user.name
       %ul.SideHeader__lists__icons
         %li.SideHeader__lists__newGroup
-          =link_to "#" do
+          = link_to (new_group_path) do
             =icon('fas', 'edit')
         %li.SideHeader__lists__editUseer
           = link_to edit_user_path(current_user) do
