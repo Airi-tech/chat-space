@@ -5,19 +5,16 @@
         = current_user.name
       %ul.SideHeader__lists__icons
         %li.SideHeader__lists__newGroup
-          =link_to "#" do
+          = link_to (new_group_path) do
             =icon('fas', 'edit')
         %li.SideHeader__lists__editUseer
           = link_to edit_user_path(current_user) do
             =icon('fas', 'cog')
 
   .GroupList
-    .GroupList__groups
-      = link_to "#", class:"group" do
-        %p.group__groupName test1
-        %p.group__message テストテストテスト
-
-    .GroupList__groups
-      = link_to "#", class:"group" do
-        %p.group__groupName test2
-        %p.group__message テストテストテスト
+    - current_user.groups.each do |group|
+      .GroupList__groups
+        = link_to "#", class:"group" do
+          %p.group__groupName
+            = group.name
+          %p.group__message メッセージはまだありません
