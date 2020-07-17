@@ -1,15 +1,10 @@
 .ChatMain
   .MeinHeader
     .MeinHeader__group
-      .MeinHeader__groupName
-        = @group.name
-      %ul.MeinHeader__groupMember
-        Member :
-        - @group.users.each do |user|
-          %li.MeinHeader__groupMember__member
-            =user.name
-
-    = link_to "Edit",edit_group_path(@group.id),class:"MeinHeader__editBtn"
+      .MeinHeader__groupName test1
+      .MeinHeader__groupMember Member : 佐藤愛里
+    = link_to "#", class: "MeinHeader__editBtn" do
+      Edit
 
   .MessageList
     = render @messages
