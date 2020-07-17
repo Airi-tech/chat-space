@@ -59,7 +59,6 @@ $color-white: rgb(255, 255, 255);
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
-    overflow: scroll;
 
     &__groups {
       padding: 20px 0 40px;
@@ -116,7 +115,6 @@ $color-white: rgb(255, 255, 255);
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 40px 0;
-    overflow: scroll;
 
     .MessageBox {
       margin-bottom: 46px;
