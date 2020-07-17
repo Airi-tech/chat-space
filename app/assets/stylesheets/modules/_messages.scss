@@ -59,6 +59,7 @@ $color-white: rgb(255, 255, 255);
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
+    overflow: scroll;
 
     &__groups {
       padding: 20px 0 40px;
@@ -97,6 +98,11 @@ $color-white: rgb(255, 255, 255);
 
     &__groupMember {
       @include color-font(#999999,12px);
+      display: flex;
+
+      &__member {
+        padding-right: 5px;
+      }
     } 
 
     &__editBtn {
@@ -115,6 +121,7 @@ $color-white: rgb(255, 255, 255);
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 40px 0;
+    overflow: scroll;
 
     .MessageBox {
       margin-bottom: 46px;
@@ -136,6 +143,11 @@ $color-white: rgb(255, 255, 255);
         @include color-font(#434A54,14px);
         margin-top: 12px;
       }
+
+      .Message__image{
+        height: 300px;
+      }
+
     }
   }
 
@@ -144,7 +156,11 @@ $color-white: rgb(255, 255, 255);
     background-color: #d2d2d2;
     padding: 20px 40px;
 
-    form {
+    .field_with_errors {
+      display: contents;
+    }
+
+    .new_message {
       display: flex;
 
       .InputBox {
@@ -161,9 +177,13 @@ $color-white: rgb(255, 255, 255);
 
         &__image {
           position: absolute;
-          top: 10px;
           right: 10px;
-          font-size: 1.3rem;
+          height: 50px;
+
+          &__icon {
+            line-height: 50px;
+            font-size: 25px;
+          }  
 
           &__file {
             display: none;
