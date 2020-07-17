@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
   end
+<<<<<<< HEAD
 
   def create
     @message = @group.messages.new(message_params)
@@ -27,3 +28,6 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 end
+=======
+end
+>>>>>>> parent of a676ac5... Add:　該当するアクションをコントローラに定義
