@@ -14,7 +14,7 @@
   .GroupList
     - current_user.groups.each do |group|
       .GroupList__groups
-        = link_to group_messages_path(group), class:"group" do
-          .group__groupName
+        = link_to "#", class:"group" do
+          %p.group__groupName
             = group.name
           %p.group__message メッセージはまだありません
