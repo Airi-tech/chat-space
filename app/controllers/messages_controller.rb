@@ -1,11 +1,20 @@
 class MessagesController < ApplicationController
-  def index
-  end
-<<<<<<< HEAD
-<<<<<<< HEAD
+  before_action :set_group
 
+  def index
+    @message = Message.new
+    @messages = @group.messages.includes(:user)
+  end
 
   def create
+    @message = @group.messages.new(message_params)
+    if @message.save
+      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+    else
+      @messages = @group.messages.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください。'
+      render :index
+    end
   end
 
   private
@@ -18,16 +27,4 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 end
-end
-  def create
-  end
-=======
-end
-  def create
-  end
->>>>>>> parent of 1f191a8... Add:　メッセージ送信機能を実装
-=======
-end
-  def create
-  end
->>>>>>> parent of 1f191a8... Add:　メッセージ送信機能を実装
+
