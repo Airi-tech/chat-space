@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   def index
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   def create
@@ -20,6 +21,11 @@ end
 end
   def create
   end
+=======
+end
+  def create
+  end
+>>>>>>> parent of 1f191a8... Add:　メッセージ送信機能を実装
 =======
 end
   def create
