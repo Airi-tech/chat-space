@@ -143,6 +143,11 @@ $color-white: rgb(255, 255, 255);
         @include color-font(#434A54,14px);
         margin-top: 12px;
       }
+
+      .Message__image{
+        height: 300px;
+      }
+
     }
   }
 
