@@ -7,4 +7,7 @@ $(function() {
       data: { keyword: input },
       dataType: "json"
     })
+    .fail(function() {
+      alert("通信エラーです。ユーザーが表示できません。");
+    });
 });
