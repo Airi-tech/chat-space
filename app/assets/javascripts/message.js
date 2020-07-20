@@ -54,4 +54,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
+      $('.MessageList').append(html);
+      $('form')[0].reset();
+      $('.MessageList').animate({ scrollTop: $('.MessageList')[0].scrollHeight});
     })
