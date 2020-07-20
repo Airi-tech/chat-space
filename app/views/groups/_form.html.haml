@@ -15,6 +15,14 @@
     .SettingGroupForm__leftField
       %label.SettingGroupForm__label チャットメンバーを追加
     .SettingGroupForm__rightField
+      .UserSearch
+        %input#UserSearch__field.SettingGroupForm__input{placeholder: "追加したいユーザー名を入力してください", type: "text"}/
+      #UserSearchResult
+  .SettingGroupForm__field
+    .SettingGroupForm__leftField
+      = f.label :name, value: "チャットメンバー", class: "SettingGroupForm__label"
+    .SettingGroupForm__rightField
+      .ChatMembers
   .SettingGroupForm__field
     .SettingGroupForm__leftField
     .SettingGroupForm__rightField
